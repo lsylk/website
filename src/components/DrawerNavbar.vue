@@ -37,8 +37,8 @@
       </md-app-drawer>
 
       <md-app-content>
-        HELLO!!!! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum
-        magnam, similique, quo recusandae placeat dicta asperiores modi sint ea.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
+        similique, quo recusandae placeat dicta asperiores modi sint ea.
       </md-app-content>
     </md-app>
   </div>
