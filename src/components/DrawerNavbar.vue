@@ -2,7 +2,7 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary" md-elevation="0">
-        <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
+        <md-button v-if="!menuVisible" class="md-icon-button" @click="toggleMenu">
           <md-icon>menu</md-icon>
         </md-button>
         <span class="md-title">My Title</span>
@@ -18,61 +18,55 @@
             </md-button>
           </div>
         </md-toolbar>
-
         <md-list>
           <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
+            <md-icon>account_circle</md-icon>
+            <span class="md-list-item-text">About</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">Sent Mail</span>
+            <md-icon>perm_media</md-icon>
+            <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
+            <md-icon>forum</md-icon>
+            <span class="md-list-item-text">Contact</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
 
       <md-app-content>
-          HELLO!!!!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea.
+        HELLO!!!! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum
+        magnam, similique, quo recusandae placeat dicta asperiores modi sint ea.
       </md-app-content>
     </md-app>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'DrawerNavbar',
-    data: () => ({
-      menuVisible: false
-    }),
-    methods: {
-      toggleMenu () {
-        this.menuVisible = !this.menuVisible
-      }
-    }
-  }
+export default {
+  name: 'DrawerNavbar',
+  data: () => ({
+    menuVisible: false,
+  }),
+  methods: {
+    toggleMenu() {
+      this.menuVisible = !this.menuVisible;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  .md-app {
-    min-height: 350px;
-    border: 1px solid rgba(#000, .12);
-  }
+.md-app {
+  min-height: 350px;
+  border: 1px solid rgba(#000, 0.12);
+}
 
-   // Demo purposes only
-  .md-drawer {
-    width: 230px;
-    max-width: calc(100vw - 125px);
-  }
+// Demo purposes only
+.md-drawer {
+  width: 230px;
+  max-width: calc(100vw - 125px);
+}
 </style>

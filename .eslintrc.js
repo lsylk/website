@@ -3,14 +3,19 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "plugin:vue/recommended",
+        "eslint:recommended",
+        "prettier/vue",
+        "plugin:prettier/recommended"
+    ],
     "parserOptions": {
         "sourceType": "module"
     },
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
