@@ -17,7 +17,7 @@
       </md-field>
     </div>
     <div>
-      <md-button class="md-dense md-raised md-primary">Submit</md-button>
+      <md-button class="md-dense md-raised submit">Submit</md-button>
     </div>
   </div>
 </template>
@@ -46,5 +46,10 @@ export default {
 .md-drawer {
   width: 230px;
   max-width: calc(100vw - 125px);
+}
+
+.submit {
+  background-color: #8d69ea !important;
+  color: white !important;
 }
 </style>

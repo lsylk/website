@@ -5,7 +5,13 @@
         <md-button v-if="!menuVisible" class="md-icon-button" @click="toggleMenu;">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">{{ bannerHeader }}</span>
+        <div class="md-title">{{ bannerHeader }}</div>
+        <div class="social-media">
+          <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank"
+            ><img :src="linkedInImg"
+          /></a>
+          <a title="Github Account" href="https://github.com/" target="blank"><img :src="githubImg"/></a>
+        </div>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="mini">
@@ -20,17 +26,17 @@
         </md-toolbar>
         <md-list>
           <md-list-item @click="togglePage('about', 'My Story')">
-            <md-icon>account_circle</md-icon>
+            <md-icon title="About Me">account_circle</md-icon>
             <span class="md-list-item-text">About</span>
           </md-list-item>
 
-          <md-list-item @click="togglePage('portfolio', 'Adventurous coding Journey')">
+          <md-list-item title="Portfolio" @click="togglePage('portfolio', 'Adventurous coding Journey')">
             <md-icon>perm_media</md-icon>
             <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
 
-          <md-list-item @click="togglePage('contact', 'Contact Me')">
-            <md-icon>forum</md-icon>
+          <md-list-item title="Contact Me" @click="togglePage('contact', 'Contact Me')">
+            <a href="mailto:leslye.lk@gmail.com"><md-icon>forum</md-icon></a>
             <span class="md-list-item-text">Contact</span>
           </md-list-item>
         </md-list>
@@ -40,7 +46,7 @@
         <div class="container">
           <About v-if="page === 'about'" />
           <Portfolio v-if="page === 'portfolio'" />
-          <Contact v-if="page === 'contact'" />
+          <!-- <Contact v-if="page === 'contact'" /> -->
         </div>
       </md-app-content>
     </md-app>
@@ -48,18 +54,22 @@
 </template>
 
 <script>
+import linkedInImg from './../assets/socialMedia/linkedin-white-32.png';
+import githubImg from './../assets/socialMedia/github-white-32.png';
 import About from './About';
 import Portfolio from './Portfolio';
-import Contact from './Contact';
+// import Contact from './Contact';
 
 export default {
   name: 'DrawerNavbar',
   components: {
     About,
     Portfolio,
-    Contact,
+    // Contact,
   },
   data: () => ({
+    linkedInImg,
+    githubImg,
     menuVisible: false,
     page: 'about',
     bannerHeader: 'My Story',
@@ -84,10 +94,15 @@ export default {
 
 .md-app-toolbar {
   background-color: #8d6aea !important;
-}
+  display: flex;
+  justify-content: space-between;
 
-.md-title {
-  align-content: center;
+  .social-media {
+    img {
+      height: 28px;
+      padding-right: 4px;
+    }
+  }
 }
 
 // // Demo purposes only

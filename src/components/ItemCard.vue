@@ -1,13 +1,16 @@
 <template>
   <md-card>
     <md-card-header>
-      <span v-if="item.isNew" class="new-banner">
+      <span v-if="item.status === 'new'" class="banner-new">
         New
+      </span>
+      <span v-if="item.status === 'inProgress'" class="banner-progress">
+        In Progress
       </span>
       <div class="md-title">
         {{ item.title }}
         <span class="github-icon">
-          <a :href="item.githubUrl" target="blank">
+          <a title="Github Repo" :href="item.githubUrl" target="blank">
             <img :src="githubImg" alt="Github Repository" />
           </a>
         </span>
@@ -16,7 +19,8 @@
     </md-card-header>
 
     <md-card-media>
-      <img :src="item.img" :alt="item.alt" />
+      <iframe v-if="item.isVideo" title="video player" :src="item.img" />
+      <img v-else :src="item.img" :alt="item.alt" />
     </md-card-media>
 
     <hr />
@@ -36,7 +40,7 @@
 </template>
 
 <script>
-import githubImg from './../assets/technologies/GitHub-Gray-32px.png';
+import githubImg from './../assets/socialMedia/github-gray-32.png';
 
 export default {
   name: 'Layouts',
@@ -60,6 +64,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.banner {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 12px;
+  transform: rotate(-35deg);
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: -7px;
+  border-radius: 25px 0px 25px 0px;
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
 .md-card {
   min-height: 440px;
   width: 320px;
@@ -67,18 +90,18 @@ export default {
   display: inline-block;
   vertical-align: top;
 
-  .new-banner {
+  .banner-new {
+    @extend .banner;
     background-color: #31afc2;
-    color: white;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 1px 12px;
-    transform: rotate(-35deg);
-    display: inline-block;
-    position: absolute;
     top: 12px;
     left: -7px;
-    border-radius: 25px 0px 25px 0px;
+  }
+
+  .banner-progress {
+    @extend .banner;
+    background-color: rgb(220, 19, 59);
+    top: 22px;
+    left: -11px;
   }
 
   .md-title {
@@ -93,9 +116,7 @@ export default {
   }
 
   .md-subhead {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    @extend .line-clamp;
     -webkit-line-clamp: 1;
   }
 
@@ -107,12 +128,10 @@ export default {
   }
 
   .technologies {
+    @extend .line-clamp;
+    -webkit-line-clamp: 2;
     padding-left: 0;
     margin: 0px 16px 10px 16px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     // color: #e60c70;
     color: #a693d8;
     li {
@@ -122,9 +141,7 @@ export default {
 }
 
 .md-card-content {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+  @extend .line-clamp;
   -webkit-line-clamp: 3;
 }
 

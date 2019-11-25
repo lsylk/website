@@ -18,6 +18,17 @@ export default {
   data: () => ({
     items: [
       {
+        title: 'iManage',
+        subTitle: 'Collaborate and Manage all your Projects!',
+        description: 'Fun Management',
+        img: 'https://www.youtube.com/embed/qJwtnwHQCZQ',
+        alt: 'Manager',
+        githubUrl: '',
+        techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Docker'],
+        isVideo: true,
+        status: 'inProgress',
+      },
+      {
         title: 'inSky',
         subTitle: 'Book your Flights Now!',
         description:
@@ -33,27 +44,27 @@ export default {
           'Flask',
           'Jinja',
           'Bootstrap',
-          'HTML5',
-          'CSS',
+          // 'HTML5',
+          // 'CSS',
         ],
-        isNew: false,
+        status: 'old',
       },
-      {
-        title: 'Milky',
-        subTitle: "Come play with me! I'm super cute",
-        description: 'Best dog ever!',
-        img:
-          'https://i.ytimg.com/vi/qJwtnwHQCZQ/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAHiYcuUMqiYW-KVKALcPbZm_7NxA',
-        alt: 'Video of samoyed',
-        githubUrl: 'https://github.com/lsylk/Airfare-Project',
-        techStack: [],
-        isNew: true,
-      },
-      { title: 'Title 2', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      { title: 'Title 3', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      { title: 'Title 4', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      { title: 'Title 5', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      { title: 'Title 6', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
+      // {
+      //   title: 'Milky',
+      //   subTitle: "Come play with me! I'm super cute",
+      //   description: 'Best dog ever!',
+      //   img: 'https://www.youtube.com/embed/qJwtnwHQCZQ',
+      //   alt: 'Video of samoyed',
+      //   githubUrl: '',
+      //   techStack: [],
+      //   isVideo: true,
+      //   status: 'new',
+      // },
+
+      // { title: 'Title 3', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
+      // { title: 'Title 4', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
+      // { title: 'Title 5', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
+      // { title: 'Title 6', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
     ],
   }),
   methods: {
@@ -72,8 +83,8 @@ export default {
 
 .portafolio-grid {
   display: flex;
-  // justify-content: start;
-  justify-content: flex-start;
+  justify-content: center;
+  // justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
 
