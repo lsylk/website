@@ -36,6 +36,7 @@ export default {
           'HTML5',
           'CSS',
         ],
+        isNew: false,
       },
       {
         title: 'Milky',
@@ -46,6 +47,7 @@ export default {
         alt: 'Video of samoyed',
         githubUrl: 'https://github.com/lsylk/Airfare-Project',
         techStack: [],
+        isNew: true,
       },
       { title: 'Title 2', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
       { title: 'Title 3', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
