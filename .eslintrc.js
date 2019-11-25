@@ -13,6 +13,7 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "no-console": "off",
         "indent": [
             "error",
             2
@@ -29,5 +30,5 @@ module.exports = {
             "error",
             "always"
         ]
-    }
+    },
 };
