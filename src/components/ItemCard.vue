@@ -1,6 +1,9 @@
 <template>
   <md-card>
     <md-card-header>
+      <span v-if="item.isNew" class="new-banner">
+        New
+      </span>
       <div class="md-title">
         {{ item.title }}
         <span class="github-icon">
@@ -39,7 +42,16 @@ export default {
   name: 'Layouts',
   props: {
     item: Object,
-    default: () => ({ title: 'Title', description: 'Description' }),
+    default: () => ({
+      title: 'Title',
+      subTitle: '',
+      description: '',
+      img: '',
+      alt: '',
+      githubUrl: '',
+      techStack: [],
+      isNew: false,
+    }),
   },
   data: () => ({
     githubImg,
@@ -49,10 +61,25 @@ export default {
 
 <style lang="scss" scoped>
 .md-card {
+  min-height: 440px;
   width: 320px;
   margin: 4px;
   display: inline-block;
   vertical-align: top;
+
+  .new-banner {
+    background-color: #31afc2;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px 12px;
+    transform: rotate(-35deg);
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: -7px;
+    border-radius: 25px 0px 25px 0px;
+  }
 
   .md-title {
     position: relative;
@@ -73,10 +100,10 @@ export default {
   }
 
   hr {
-    width: 70% !important;
-    border: none !important;
-    height: 1px !important;
-    background-color: rgba(0, 0, 0, 0.12) !important;
+    width: 70%;
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
   }
 
   .technologies {
@@ -86,7 +113,8 @@ export default {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    color: #e60c70;
+    // color: #e60c70;
+    color: #a693d8;
     li {
       display: inline;
     }
