@@ -2,22 +2,21 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary" md-elevation="0">
-        <md-button v-if="!menuVisible" class="md-icon-button" @click="toggleMenu;">
+        <md-button v-if="!menuVisible" class="md-icon-button" @click="toggleMenu">
           <md-icon>menu</md-icon>
         </md-button>
         <div class="md-title">{{ bannerHeader }}</div>
         <div class="social-media">
-          <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank"
-            ><img :src="linkedInImg"
-          /></a>
+          <a title="Contact Me" href="mailto:hi@leslye.dev"> <img :src="mailImg"/></a>
+          <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank">
+            <img :src="linkedInImg" />
+          </a>
           <a title="Github Account" href="https://github.com/" target="blank"><img :src="githubImg"/></a>
         </div>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="mini">
         <md-toolbar class="md-transparent" md-elevation="0">
-          <span>Navigation</span>
-
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button md-dense" @click="toggleMenu">
               <md-icon>keyboard_arrow_left</md-icon>
@@ -35,10 +34,10 @@
             <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
 
-          <md-list-item title="Contact Me" @click="togglePage('contact', 'Contact Me')">
-            <a href="mailto:leslye.lk@gmail.com"><md-icon>forum</md-icon></a>
+          <!-- <md-list-item title="Contact Me" @click="togglePage('contact', 'Contact Me')">
+            <md-icon>forum</md-icon>
             <span class="md-list-item-text">Contact</span>
-          </md-list-item>
+          </md-list-item> -->
         </md-list>
       </md-app-drawer>
 
@@ -54,6 +53,7 @@
 </template>
 
 <script>
+import mailImg from './../assets/socialMedia/mail-white-64.png';
 import linkedInImg from './../assets/socialMedia/linkedin-white-32.png';
 import githubImg from './../assets/socialMedia/github-white-32.png';
 import About from './About';
@@ -68,6 +68,7 @@ export default {
     // Contact,
   },
   data: () => ({
+    mailImg,
     linkedInImg,
     githubImg,
     menuVisible: false,
@@ -98,6 +99,10 @@ export default {
   justify-content: space-between;
 
   .social-media {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     img {
       height: 28px;
       padding-right: 4px;
@@ -105,9 +110,28 @@ export default {
   }
 }
 
-// // Demo purposes only
-// .md-drawer {
-//   width: 230px;
-//   max-width: calc(100vw - 125px);
-// }
+.md-drawer {
+  width: 160px;
+  max-width: calc(100vw - 125px);
+  @media (max-width: 601px) and (max-width: 960px) {
+    max-width: 48px !important;
+    top: -16px;
+  }
+  @media (max-width: 600px) {
+    max-width: 48px !important;
+    top: -8px;
+  }
+}
+
+.md-list-item {
+  .md-icon {
+    @media (max-width: 960px) {
+      padding: 0px 12px !important;
+    }
+  }
+}
+
+main.md-app-container {
+  overflow: hidden !important;
+}
 </style>

@@ -8,7 +8,7 @@
 
 <script>
 import ItemCard from './ItemCard';
-import inSkyImg from '../assets/inSky256x160.png';
+import inSkyImg from '../assets/projects/inSky256x160.png';
 
 export default {
   name: 'Portfolio',
@@ -21,7 +21,7 @@ export default {
         title: 'iManage',
         subTitle: 'Collaborate and Manage all your Projects!',
         description: 'Fun Management',
-        img: 'https://www.youtube.com/embed/qJwtnwHQCZQ',
+        img: '',
         alt: 'Manager',
         githubUrl: '',
         techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Docker'],
@@ -36,42 +36,11 @@ export default {
         img: inSkyImg,
         alt: 'inSky web app that helps users find cheap flights.',
         githubUrl: 'https://github.com/lsylk/Airfare-Project',
-        techStack: [
-          'QPX Express API',
-          'Python',
-          'Javascript',
-          'AngularJS',
-          'Flask',
-          'Jinja',
-          'Bootstrap',
-          // 'HTML5',
-          // 'CSS',
-        ],
+        techStack: ['QPX Express API', 'Python', 'Javascript', 'AngularJS', 'Flask', 'Jinja', 'Bootstrap'],
         status: 'old',
       },
-      // {
-      //   title: 'Milky',
-      //   subTitle: "Come play with me! I'm super cute",
-      //   description: 'Best dog ever!',
-      //   img: 'https://www.youtube.com/embed/qJwtnwHQCZQ',
-      //   alt: 'Video of samoyed',
-      //   githubUrl: '',
-      //   techStack: [],
-      //   isVideo: true,
-      //   status: 'new',
-      // },
-
-      // { title: 'Title 3', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      // { title: 'Title 4', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      // { title: 'Title 5', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
-      // { title: 'Title 6', description: 'Description ....', img: '', githubUrl: '', techStack: [] },
     ],
   }),
-  methods: {
-    // cons() {
-    //   console.log('hello', this.testItem);
-    // },
-  },
 };
 </script>
 
@@ -84,7 +53,6 @@ export default {
 .portafolio-grid {
   display: flex;
   justify-content: center;
-  // justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
 

@@ -132,7 +132,6 @@ export default {
     -webkit-line-clamp: 2;
     padding-left: 0;
     margin: 0px 16px 10px 16px;
-    // color: #e60c70;
     color: #a693d8;
     li {
       display: inline;
