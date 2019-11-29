@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <div id="leftContent">
-      <img id="img1" src="./../assets/logoSignatureTransparent.png" />
+      <img id="img1" src="./../assets/about/logoSignatureTransparent.png" />
       <p>
         I am a Front-End Engineer, who has almost 2 years of experience. I am passionate about art and science, and I
         think coding is a great combination of both. With simple and elegant blocks of code, one can produce practical
@@ -16,11 +16,11 @@
     </div>
 
     <div id="rightContent">
-      <img id="img1" src="https://images.unsplash.com/photo-1500964757637-c85e8a162699" alt="Colorful landscape" />
-      <img id="img2" src="https://images.unsplash.com/photo-1556139943-4bdca53adf1e" alt="Waves of pastel colors" />
+      <img id="img1" src="./../assets/about/paintedMountains-250.jpeg" alt="Colorful landscape" />
+      <img id="img2" src="./../assets/about/colorfulArt-250.jpeg" alt="Waves of pastel colors" />
       <img
         id="img3"
-        src="https://images.unsplash.com/photo-1532422769059-f95b64af17ad"
+        src="./../assets/about/colorfulGrayBuilding-250.jpeg"
         alt="Gray, red, and white mosaic building painting"
       />
     </div>
