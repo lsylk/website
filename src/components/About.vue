@@ -75,8 +75,8 @@ export default {
 #img1,
 #img2,
 #img3 {
-  width: 250px;
-  height: 250px;
+  width: 215px;
+  height: 215px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
