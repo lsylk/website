@@ -11,7 +11,7 @@
           <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank">
             <img :src="linkedInImg" />
           </a>
-          <a title="Github Account" href="https://github.com/" target="blank"><img :src="githubImg"/></a>
+          <a title="Github Account" href="https://github.com/lsylk" target="blank"><img :src="githubImg"/></a>
         </div>
       </md-app-toolbar>
 
