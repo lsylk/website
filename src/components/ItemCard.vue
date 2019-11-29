@@ -1,41 +1,43 @@
 <template>
-  <md-card>
-    <md-card-header>
-      <span v-if="item.status === 'new'" class="banner-new">
-        New
-      </span>
-      <span v-if="item.status === 'inProgress'" class="banner-progress">
-        In Progress
-      </span>
-      <div class="md-title">
-        {{ item.title }}
-        <span class="github-icon">
-          <a title="Github Repo" :href="item.githubUrl" target="blank">
-            <img :src="githubImg" alt="Github Repository" />
-          </a>
+  <md-card :md-with-hover="true">
+    <div class="card" @click="openGithubRepo">
+      <md-card-header>
+        <span v-if="item.status === 'new'" class="banner-new">
+          New
         </span>
-      </div>
-      <div class="md-subhead">{{ item.subTitle }}</div>
-    </md-card-header>
+        <span v-if="item.status === 'inProgress'" class="banner-progress">
+          In Progress
+        </span>
+        <div class="md-title">
+          {{ item.title }}
+          <span class="github-icon">
+            <a title="Github Repo" :href="item.githubUrl" target="blank" @click="openGithubRepo">
+              <img :src="githubImg" alt="Github Repository" />
+            </a>
+          </span>
+        </div>
+        <div class="md-subhead">{{ item.subTitle }}</div>
+      </md-card-header>
 
-    <md-card-media>
-      <iframe v-if="item.isVideo" title="video player" :src="item.img" />
-      <img v-else :src="item.img" :alt="item.alt" />
-    </md-card-media>
+      <md-card-media>
+        <iframe v-if="item.isVideo" title="video player" :src="item.img" />
+        <img v-else :src="item.img" :alt="item.alt" />
+      </md-card-media>
 
-    <hr />
+      <hr />
 
-    <md-card-content>
-      {{ item.description }}
-    </md-card-content>
+      <md-card-content>
+        {{ item.description }}
+      </md-card-content>
 
-    <hr />
+      <hr />
 
-    <md-card-action>
-      <ul class="technologies">
-        <li v-for="(technology, index) in item.techStack" :key="index">{{ technology }} &bull; &nbsp;</li>
-      </ul>
-    </md-card-action>
+      <md-card-content>
+        <ul class="technologies">
+          <li v-for="(technology, index) in item.techStack" :key="index">{{ technology }} &bull; &nbsp;</li>
+        </ul>
+      </md-card-content>
+    </div>
   </md-card>
 </template>
 
@@ -62,6 +64,11 @@ export default {
   data: () => ({
     githubImg,
   }),
+  methods: {
+    openGithubRepo() {
+      window.open(this.item.githubUrl, '_blank');
+    },
+  },
 };
 </script>
 
@@ -148,5 +155,12 @@ export default {
 
 .md-card-media img {
   width: 80%;
+}
+
+@media all and (max-width: 375px) {
+  .md-card {
+    max-width: 300px;
+    padding: 10px;
+  }
 }
 </style>
