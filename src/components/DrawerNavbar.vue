@@ -7,7 +7,7 @@
         </md-button>
         <div class="md-title">{{ bannerHeader }}</div>
         <div class="social-media">
-          <a title="Contact Me" href="mailto:hi@leslye.dev"> <img :src="mailImg"/></a>
+          <a title="Contact Me" href="mailto:me@leslye.dev"> <img :src="mailImg"/></a>
           <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank">
             <img :src="linkedInImg" />
           </a>
@@ -75,6 +75,11 @@ export default {
     page: 'about',
     bannerHeader: 'My Story',
   }),
+  computed: {
+    getPersistentType() {
+      return window.screen.width > 414 ? 'mini' : 'full';
+    },
+  },
   methods: {
     toggleMenu() {
       this.menuVisible = !this.menuVisible;
@@ -82,11 +87,6 @@ export default {
     togglePage(page, bannerHeader) {
       this.page = page;
       this.bannerHeader = bannerHeader;
-    },
-  },
-  computed: {
-    getPersistentType() {
-      return window.screen.width > 414 ? 'mini' : 'full';
     },
   },
 };
