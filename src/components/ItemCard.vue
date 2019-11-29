@@ -45,17 +45,19 @@ import githubImg from './../assets/socialMedia/github-gray-32.png';
 export default {
   name: 'Layouts',
   props: {
-    item: Object,
-    default: () => ({
-      title: 'Title',
-      subTitle: '',
-      description: '',
-      img: '',
-      alt: '',
-      githubUrl: '',
-      techStack: [],
-      isNew: false,
-    }),
+    item: {
+      type: Object,
+      default: () => ({
+        title: 'Title',
+        subTitle: '',
+        description: '',
+        img: '',
+        alt: '',
+        githubUrl: '',
+        techStack: [],
+        isNew: false,
+      }),
+    },
   },
   data: () => ({
     githubImg,
