@@ -15,7 +15,7 @@
         </div>
       </md-app-toolbar>
 
-      <md-app-drawer :md-active.sync="menuVisible" md-persistent="mini">
+      <md-app-drawer :md-active.sync="menuVisible" :md-persistent="getPersistentType">
         <md-toolbar class="md-transparent" md-elevation="0">
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button md-dense" @click="toggleMenu">
@@ -29,7 +29,7 @@
             <span class="md-list-item-text">About</span>
           </md-list-item>
 
-          <md-list-item title="Portfolio" @click="togglePage('portfolio', 'Adventurous coding Journey')">
+          <md-list-item title="Portfolio" @click="togglePage('portfolio', 'Coding Journey')">
             <md-icon>perm_media</md-icon>
             <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
@@ -84,6 +84,11 @@ export default {
       this.bannerHeader = bannerHeader;
     },
   },
+  computed: {
+    getPersistentType() {
+      return window.screen.width > 414 ? 'mini' : 'full';
+    },
+  },
 };
 </script>
 
@@ -113,25 +118,5 @@ export default {
 .md-drawer {
   width: 160px;
   max-width: calc(100vw - 125px);
-  @media (max-width: 601px) and (max-width: 960px) {
-    max-width: 48px !important;
-    top: -16px;
-  }
-  @media (max-width: 600px) {
-    max-width: 48px !important;
-    top: -8px;
-  }
-}
-
-.md-list-item {
-  .md-icon {
-    @media (max-width: 960px) {
-      padding: 0px 12px !important;
-    }
-  }
-}
-
-main.md-app-container {
-  overflow: hidden !important;
 }
 </style>
