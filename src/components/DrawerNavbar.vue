@@ -33,11 +33,6 @@
             <md-icon>perm_media</md-icon>
             <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
-
-          <!-- <md-list-item title="Contact Me" @click="togglePage('contact', 'Contact Me')">
-            <md-icon>forum</md-icon>
-            <span class="md-list-item-text">Contact</span>
-          </md-list-item> -->
         </md-list>
       </md-app-drawer>
 
@@ -45,7 +40,6 @@
         <div class="container">
           <About v-if="page === 'My Story'" />
           <Portfolio v-if="page === 'Portfolio'" />
-          <!-- <Contact v-if="page === 'contact'" /> -->
         </div>
       </md-app-content>
     </md-app>
@@ -58,14 +52,12 @@ import linkedInImg from './../assets/socialMedia/linkedin-white-32.png';
 import githubImg from './../assets/socialMedia/github-white-32.png';
 import About from './About';
 import Portfolio from './Portfolio';
-// import Contact from './Contact';
 
 export default {
   name: 'DrawerNavbar',
   components: {
     About,
     Portfolio,
-    // Contact,
   },
   data: () => ({
     mailImg,
