@@ -47,6 +47,9 @@ export default {
     max-height: 335px;
     max-width: 335px;
   }
+  p {
+    text-align: left;
+  }
 }
 
 #rightContent {
