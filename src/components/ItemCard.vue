@@ -1,5 +1,5 @@
 <template>
-  <md-card :md-with-hover="true">
+  <md-card :md-with-hover="item.status !== 'inProgress'" :class="{ 'disable-item-card': isDisabled }">
     <div class="card" @click="openGithubRepo">
       <md-card-header>
         <span v-if="item.status === 'new'" class="banner-new">
@@ -20,7 +20,10 @@
       </md-card-header>
 
       <md-card-media>
-        <iframe v-if="item.isVideo" title="video player" :src="item.img" />
+        <span v-if="item.status === 'inProgress'" class="banner-coming-soon">
+          Coming Soon...
+        </span>
+        <iframe id="itemCardIframe" v-if="item.isVideo" title="video player" :src="item.img" />
         <img v-else :src="item.img" :alt="item.alt" />
       </md-card-media>
 
@@ -64,9 +67,16 @@ export default {
   data: () => ({
     githubImg,
   }),
+  computed: {
+    isDisabled() {
+      return this.item.status === 'inProgress';
+    },
+  },
   methods: {
     openGithubRepo() {
-      window.open(this.item.githubUrl, '_blank');
+      if (this.item.status !== 'inProgress') {
+        window.open(this.item.githubUrl, '_blank');
+      }
     },
   },
 };
@@ -92,8 +102,13 @@ export default {
   -webkit-box-orient: vertical;
 }
 
+.disable-item-card {
+  background-color: #dcdcdcc7 !important;
+}
+
 .md-card {
-  min-height: 440px;
+  min-height: 474px;
+  max-height: 474px;
   width: 320px;
   margin: 4px;
   display: inline-block;
@@ -108,9 +123,20 @@ export default {
 
   .banner-progress {
     @extend .banner;
-    background-color: rgb(220, 19, 59);
+    // background-color: rgb(220, 19, 59);
+    background-color: rgba(220, 19, 59, 0.49);
     top: 22px;
     left: -11px;
+  }
+
+  .banner-coming-soon {
+    @extend .banner;
+    top: 68px;
+    left: 59px;
+    color: rgba(220, 19, 59, 0.49);
+    font-size: 26px;
+    transform: none;
+    text-shadow: 2px 2px 2px #d0cccd;
   }
 
   .md-title {
