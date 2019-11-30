@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <DrawerNavbar />
+    <AppFooter />
   </div>
 </template>
 
 <script>
 import DrawerNavbar from './components/DrawerNavbar';
+import AppFooter from './components/AppFooter';
 
 export default {
   name: 'App',
   components: {
     DrawerNavbar,
+    AppFooter,
   },
 };
 </script>
