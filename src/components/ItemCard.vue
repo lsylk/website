@@ -10,7 +10,7 @@
         </span>
         <div class="md-title">
           {{ item.title }}
-          <span class="github-icon">
+          <span v-if="item.status !== 'work'" class="github-icon">
             <a title="Github Repo" :href="item.githubUrl" target="blank" @click="openGithubRepo">
               <img :src="githubImg" alt="Github Repository" />
             </a>
@@ -23,7 +23,7 @@
         <span v-if="item.status === 'inProgress'" class="banner-coming-soon">
           Coming Soon...
         </span>
-        <iframe id="itemCardIframe" v-if="item.isVideo" title="video player" :src="item.img" />
+        <iframe v-if="item.isVideo" id="itemCardIframe" title="video player" :src="item.img" />
         <img v-else :src="item.img" :alt="item.alt" />
       </md-card-media>
 
