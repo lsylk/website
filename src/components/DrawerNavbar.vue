@@ -72,7 +72,7 @@ export default {
     linkedInImg,
     githubImg,
     menuVisible: false,
-    page: 'About',
+    page: 'My Story',
   }),
   computed: {
     getPersistentType() {
@@ -92,8 +92,7 @@ export default {
 
 <style lang="scss" scoped>
 .md-app {
-  min-height: 1000px;
-  border: 1px solid rgba(#000, 0.12);
+  height: 660px;
 }
 
 .md-app-toolbar {
@@ -116,5 +115,11 @@ export default {
 .md-drawer {
   width: 160px;
   max-width: calc(100vw - 125px);
+}
+
+@media (min-width: 600px) {
+  .md-app-content {
+    border-right: 0px;
+  }
 }
 </style>
