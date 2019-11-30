@@ -19,17 +19,6 @@ export default {
   data: () => ({
     items: [
       {
-        title: 'iManage',
-        subTitle: 'Collaborate and Manage all your Projects!',
-        description: '',
-        img: '',
-        alt: '',
-        githubUrl: '',
-        techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Jest', 'Cypress', 'Docker'],
-        isVideo: true,
-        status: 'inProgress',
-      },
-      {
         title: 'JustWatch',
         subTitle: 'World Largest Streaming Guide!',
         description:
@@ -50,6 +39,28 @@ export default {
         githubUrl: 'https://github.com/lsylk/Airfare-Project',
         techStack: ['QPX Express API', 'Python', 'Javascript', 'AngularJS', 'Flask', 'Jinja', 'Bootstrap'],
         status: 'old',
+      },
+      {
+        title: 'iManage',
+        subTitle: 'Collaborate and Manage all your Projects!',
+        description: '',
+        img: '',
+        alt: '',
+        githubUrl: '',
+        techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Jest', 'Cypress', 'Docker'],
+        isVideo: true,
+        status: 'inProgress',
+      },
+      {
+        title: 'Redesign Website',
+        subTitle: 'Time for a new look!',
+        description: "Redesign customer's personal website that contains with modern frameworks.",
+        img: '',
+        alt: 'Personal Website by Aaron Elligsen',
+        githubUrl: 'aaronelligsen.com',
+        techStack: ['Javascript', 'React', 'Jest', 'Cypress'],
+        isVideo: true,
+        status: 'inProgress',
       },
     ],
   }),
