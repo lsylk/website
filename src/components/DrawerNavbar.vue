@@ -5,7 +5,7 @@
         <md-button v-if="!menuVisible" class="md-icon-button" @click="toggleMenu">
           <md-icon>menu</md-icon>
         </md-button>
-        <div class="md-title">{{ bannerHeader }}</div>
+        <div class="md-title">{{ page }}</div>
         <div class="social-media">
           <a title="Contact Me" href="mailto:me@leslye.dev"> <img :src="mailImg"/></a>
           <a title="LinkedIn Profile" href="https://www.linkedin.com/in/lsylk/" target="blank">
@@ -24,12 +24,12 @@
           </div>
         </md-toolbar>
         <md-list>
-          <md-list-item @click="togglePage('about', 'My Story')">
-            <md-icon title="About Me">account_circle</md-icon>
-            <span class="md-list-item-text">About</span>
+          <md-list-item @click="togglePage('My Story')">
+            <md-icon title="My Story">account_circle</md-icon>
+            <span class="md-list-item-text">My Story</span>
           </md-list-item>
 
-          <md-list-item title="Portfolio" @click="togglePage('portfolio', 'Coding Journey')">
+          <md-list-item title="Portfolio" @click="togglePage('Portfolio')">
             <md-icon>perm_media</md-icon>
             <span class="md-list-item-text">Portfolio</span>
           </md-list-item>
@@ -43,8 +43,8 @@
 
       <md-app-content>
         <div class="container">
-          <About v-if="page === 'about'" />
-          <Portfolio v-if="page === 'portfolio'" />
+          <About v-if="page === 'My Story'" />
+          <Portfolio v-if="page === 'Portfolio'" />
           <!-- <Contact v-if="page === 'contact'" /> -->
         </div>
       </md-app-content>
@@ -72,8 +72,7 @@ export default {
     linkedInImg,
     githubImg,
     menuVisible: false,
-    page: 'about',
-    bannerHeader: 'My Story',
+    page: 'About',
   }),
   computed: {
     getPersistentType() {
@@ -84,9 +83,8 @@ export default {
     toggleMenu() {
       this.menuVisible = !this.menuVisible;
     },
-    togglePage(page, bannerHeader) {
+    togglePage(page) {
       this.page = page;
-      this.bannerHeader = bannerHeader;
     },
   },
 };
