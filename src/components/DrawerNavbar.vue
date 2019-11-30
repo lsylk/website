@@ -91,6 +91,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.md-app {
+  height: 630px;
+}
+
 .md-app-toolbar {
   background-color: #8d6aea !important;
   display: flex;

@@ -52,7 +52,7 @@ export default {
 
 .portafolio-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
   flex-wrap: wrap;
 
