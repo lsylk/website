@@ -9,6 +9,7 @@
 <script>
 import ItemCard from './ItemCard';
 import inSkyImg from '../assets/projects/inSky256x160.png';
+import justWatchImg from '../assets/projects/justWatchLogo-256.png';
 
 export default {
   name: 'Portfolio',
@@ -27,6 +28,17 @@ export default {
         techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Jest', 'Cypress', 'Docker'],
         isVideo: true,
         status: 'inProgress',
+      },
+      {
+        title: 'JustWatch',
+        subTitle: 'World Largest Streaming Guide!',
+        description:
+          'Worked at JustWatch for 2 years as a Frontend Engineer. JustWatch has 12M monthly active users over mobile and web.',
+        img: justWatchImg,
+        alt: 'JustWatch Logo',
+        githubUrl: 'https://www.justwatch.com/us',
+        techStack: ['Javascript', 'AngularJS', 'VueJS', 'TypeScript', 'Bootstrap', 'Ionic'],
+        status: 'work',
       },
       {
         title: 'inSky',
