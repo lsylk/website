@@ -43,7 +43,12 @@ export default {
       {
         title: 'iManage',
         subTitle: 'Collaborate and Manage all your Projects!',
-        description: '',
+        description:
+          'Task, Sprint, and Backlog tracker for agile development projects. It can be used to track progress, record details, comments...',
+        // assignee, and task history.
+        // It will be able to save data locally and on the server using a database.
+        // The implemented APIs are following a RESTful approach.
+        // It is built with Javascript, Express, Vue, Mongoose, Material Design, Ava, Jest, Cypress and Docker.',
         img: '',
         alt: '',
         githubUrl: '',
