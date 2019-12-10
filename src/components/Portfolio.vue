@@ -52,7 +52,7 @@ export default {
         // It is built with Javascript, Express, Vue, Mongoose, Material Design, Ava, Jest, Cypress and Docker.',
         img: iManageDemo,
         alt: 'Video of the Task, Sprint, and Backlog tracker for agile development projects',
-        githubUrl: 'https://github.com/lsylk/JS-crashCourse-WTM/final-project',
+        githubUrl: 'https://github.com/lsylk/JS-crashCourse-WTM/tree/master/final-project',
         techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Jest', 'Cypress', 'Docker'],
         isVideo: true,
         status: 'inProgressRelease',
