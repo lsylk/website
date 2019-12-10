@@ -10,6 +10,7 @@
 import ItemCard from './ItemCard';
 import inSkyImg from '../assets/projects/inSky256x160.png';
 import justWatchImg from '../assets/projects/justWatchLogo-256.png';
+import iManageDemo from '../assets/projects/iManageDemo.mp4';
 
 export default {
   name: 'Portfolio',
@@ -36,7 +37,7 @@ export default {
           'inSky is a user-driven web app that provides the ability for users to find the best flight deals for their travels.',
         img: inSkyImg,
         alt: 'inSky web app that helps users find cheap flights.',
-        githubUrl: 'https://github.com/lsylk/Airfare-Project',
+        githubUrl: 'https://github.com/lsylk/JS-crashCourse-WTM/tree/master/final-project',
         techStack: ['QPX Express API', 'Python', 'Javascript', 'AngularJS', 'Flask', 'Jinja', 'Bootstrap'],
         status: 'old',
       },
@@ -49,12 +50,12 @@ export default {
         // It will be able to save data locally and on the server using a database.
         // The implemented APIs are following a RESTful approach.
         // It is built with Javascript, Express, Vue, Mongoose, Material Design, Ava, Jest, Cypress and Docker.',
-        img: '',
+        img: iManageDemo,
         alt: 'Video of the Task, Sprint, and Backlog tracker for agile development projects',
-        githubUrl: 'https://github.com/lsylk/JS-crashCourse-WTM',
+        githubUrl: 'https://github.com/lsylk/JS-crashCourse-WTM/final-project',
         techStack: ['Javascript', 'Express', 'MongoDB', 'Ava', 'VueJS', 'Jest', 'Cypress', 'Docker'],
         isVideo: true,
-        status: 'inProgress',
+        status: 'inProgressRelease',
       },
       {
         title: 'Redesign Website',

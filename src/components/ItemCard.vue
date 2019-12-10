@@ -8,6 +8,9 @@
         <span v-if="item.status === 'inProgress'" class="banner-progress">
           In Progress
         </span>
+        <span v-if="item.status === 'inProgressRelease'" class="banner-improvement">
+          In Progress
+        </span>
         <div class="md-title">
           {{ item.title }}
           <span v-if="item.status !== 'work'" class="github-icon">
@@ -19,12 +22,20 @@
         <div class="md-subhead">{{ item.subTitle }}</div>
       </md-card-header>
 
-      <md-card-media>
+      <md-card-media :class="item.isVideo ? 'itemCardVideo' : ''">
         <span v-if="item.status === 'inProgress'" class="banner-coming-soon">
           Coming Soon...
         </span>
-        <iframe v-if="item.isVideo" id="itemCardIframe" title="video player" :src="item.img" />
-        <img v-else :src="item.img" :alt="item.alt" />
+        <iframe v-if="item.isVideo && item.status === 'inProgress'" title="video player" :src="item.img" />
+        <video
+          v-else-if="item.isVideo && item.status === 'inProgressRelease'"
+          controls=""
+          name="media"
+          title="video player"
+        >
+          <source :src="item.img" type="video/mp4" />
+        </video>
+        <img v-else-if="!item.isVideo" :src="item.img" :alt="item.alt" />
       </md-card-media>
 
       <hr />
@@ -129,6 +140,13 @@ export default {
     left: -11px;
   }
 
+  .banner-improvement {
+    @extend .banner;
+    background-color: rgb(220, 19, 59);
+    top: 22px;
+    left: -11px;
+  }
+
   .banner-coming-soon {
     @extend .banner;
     top: 68px;
@@ -154,7 +172,12 @@ export default {
     @extend .line-clamp;
     -webkit-line-clamp: 1;
   }
-
+  .itemCardVideo {
+    video {
+      border: 1px solid #80808036;
+      max-height: 185px;
+    }
+  }
   hr {
     width: 70%;
     border: none;
