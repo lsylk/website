@@ -60,7 +60,7 @@ export default {
       {
         title: 'Redesign Website',
         subTitle: 'Time for a new look!',
-        description: "Redesign customer's personal website that contains with modern frameworks.",
+        description: "Redesign customer's personal website with modern frameworks.",
         img: '',
         alt: 'Personal Website by Aaron Elligsen',
         githubUrl: 'https://aaronelligsen.com/',
