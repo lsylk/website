@@ -1,20 +1,20 @@
 <template>
   <div>
     <div id="app">
-      <DrawerNavbar />
+      <NavBar />
     </div>
     <AppFooter />
   </div>
 </template>
 
 <script>
-import DrawerNavbar from './components/DrawerNavbar';
+import NavBar from './components/NavBar';
 import AppFooter from './components/AppFooter';
 
 export default {
   name: 'App',
   components: {
-    DrawerNavbar,
+    NavBar,
     AppFooter,
   },
 };

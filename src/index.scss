@@ -1,0 +1,7 @@
+@import "~vue-material/dist/theme/engine"; 
+
+@include md-register-theme("default", (
+  primary: #8d6aea
+));
+
+@import "~vue-material/dist/theme/all";
