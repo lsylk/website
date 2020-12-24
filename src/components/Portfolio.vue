@@ -10,6 +10,7 @@
 import ItemCard from './ItemCard';
 import inSkyImg from '../assets/projects/inSky256x160.png';
 import justWatchImg from '../assets/projects/justWatchLogo-256.png';
+import olxLogoImg from '../assets/projects/olxLogo-160.png';
 import iManageDemo from '../assets/projects/iManageDemo.mp4';
 
 export default {
@@ -19,6 +20,16 @@ export default {
   },
   data: () => ({
     items: [
+      {
+        title: 'OLX Group',
+        subTitle: 'A worldwide leading classifieds platform!',
+        description: `Currently working on helping people around the world to buy and sell in a transparent, fast and secure way.`,
+        img: olxLogoImg,
+        alt: 'OLX Group Logo',
+        githubUrl: 'https://www.olxgroup.com',
+        techStack: ['TypeScript', 'React', 'Storybook', 'Jest', 'Puppeteer', 'Internal tools'],
+        status: 'work',
+      },
       {
         title: 'JustWatch',
         subTitle: 'World Largest Streaming Guide!',

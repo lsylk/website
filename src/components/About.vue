@@ -2,17 +2,8 @@
   <div class="page-container">
     <div id="leftContent">
       <img id="img1" src="./../assets/about/logoSignatureTransparent.png" />
-      <p>
-        I am a Front-End Engineer, who has almost 2 years of experience. I am passionate about art and science, and I
-        think coding is a great combination of both. With simple and elegant blocks of code, one can produce practical
-        and appealing programs for users. I have a growth mindset, and I constantly learn and seek new challenges.
-      </p>
-      <p>
-        My strengths lie within Javascript and AngularJS, and I’m working on deepening my knowledge in Typescript, Vue,
-        React and Redux. I had the opportunity to work with and learn from very knowledgeable senior engineers. I enjoy
-        building small projects on the side, and I frequently attend meetups and workshops to gain exposure to new
-        technologies and meet new people.
-      </p>
+      <p>{{ p1 }}</p>
+      <p>{{ p2 }}</p>
     </div>
 
     <div id="rightContent">
@@ -30,7 +21,19 @@
 <script>
 export default {
   name: 'About',
+  data: () => ({
+    p1,
+    p2,
+  }),
 };
+
+const p1 = `I am a Front-End Engineer, who loves to travel and learn new langauges. I am passionate about art and science, and I
+        think coding is a great combination of both. With simple and elegant blocks of code, one can produce practical
+        and appealing programs for users. I have a growth mindset, and I constantly learn and seek new challenges.`;
+const p2 = `My strengths lie within Javascript and AngularJS, and I’m working on deepening my knowledge in Typescript, Vue,
+        React and Redux. I had the opportunity to work with and learn from very knowledgeable senior engineers. I enjoy
+        building small projects on the side, and I frequently attend meetups and workshops to gain exposure to new
+        technologies and meet new people.`;
 </script>
 
 <style lang="scss" scoped>

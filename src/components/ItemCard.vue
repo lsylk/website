@@ -121,7 +121,8 @@ export default {
   min-height: 474px;
   max-height: 474px;
   width: 320px;
-  margin: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   display: inline-block;
   vertical-align: top;
 
@@ -203,7 +204,7 @@ export default {
 }
 
 .md-card-media img {
-  width: 80%;
+  width: auto;
 }
 
 @media all and (max-width: 375px) {

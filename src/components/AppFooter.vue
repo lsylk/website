@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <span>Made with <md-icon>style</md-icon> and <md-icon>favorite_border</md-icon></span>
+    <span>Made with <md-icon>favorite_border</md-icon></span>
     <span><a class="contact" href="mailto:me@leslye.dev"> Contact</a></span>
     <span>
       <a href="https://www.iubenda.com/privacy-policy/81930472" title="Privacy Policy" target="_blank">Imprint</a>
